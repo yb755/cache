@@ -4,8 +4,10 @@ import org.springframework.cache.Cache;
 
 public class EhCache implements Cache {
 
+	private String name;
+
 	public String getName() {
-		return null;
+		return name;
 	}
 
 	public Object getNativeCache() {

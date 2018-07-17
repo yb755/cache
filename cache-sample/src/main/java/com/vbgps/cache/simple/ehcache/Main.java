@@ -12,6 +12,12 @@ public class Main {
 		System.out.println(user.getUserName());
 		UserInfo user2 = userService.findById(22);
 		System.out.println(user2.getUserName());
+		UserInfo user3 = userService.findByUser(user2);
+		System.out.println(user3.getUserName());
+		UserInfo userInfo=new UserInfo();
+		userInfo.setUserId(1);
+		UserInfo user4 = userService.findByUser(userInfo);
+		System.out.println(user4.getUserName());
 		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
 
 			public void run() {

@@ -11,4 +11,7 @@ public interface UserService {
 
 	@Cacheable(value = "")
 	List<UserInfo> findByIds(Integer... userIds);
+
+	@Cacheable(value = "user-info")
+	UserInfo findByUser(UserInfo user);
 }

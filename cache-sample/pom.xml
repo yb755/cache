@@ -6,8 +6,8 @@
 		<artifactId>cache</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>cache-test</groupId>
-	<artifactId>cache-test</artifactId>
+	<groupId>cache-sample</groupId>
+	<artifactId>cache-sample</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>cache-ehcache</groupId>

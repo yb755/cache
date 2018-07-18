@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-	@Cacheable(value = "user-info")
 	public UserInfo findById(Integer userId) {
 		System.out.println("load user from db,cache key="+userId);
 		UserInfo user = new UserInfo();
@@ -20,8 +19,7 @@ public class UserServiceImpl implements UserService {
 	public List<UserInfo> findByIds(Integer... userIds) {
 		return null;
 	}
-
-	@Cacheable(value = "user-info")
+	
 	public UserInfo findByUser(UserInfo user2) {
 		System.out.println("findByUser from db,cache key obj user="+user2.getUserId());
 		UserInfo user = new UserInfo();

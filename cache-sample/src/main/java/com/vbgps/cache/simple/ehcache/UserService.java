@@ -2,11 +2,15 @@ package com.vbgps.cache.simple.ehcache;
 
 import java.util.List;
 
-public interface UserService {
+import org.springframework.cache.annotation.Cacheable;
 
+public interface UserService {
+	
+	@Cacheable(value = "user-info")
 	UserInfo findById(Integer userId);
 
 	List<UserInfo> findByIds(Integer... userIds);
 
+	@Cacheable(value = "user-info")
 	UserInfo findByUser(UserInfo user);
 }

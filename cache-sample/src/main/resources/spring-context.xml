@@ -9,7 +9,7 @@
 
 	<context:annotation-config/>
 	<context:component-scan base-package="com.vbgps.cache"/>
-	<cache:annotation-driven cache-manager="cacheManager"/>
+	<cache:annotation-driven cache-manager="cacheManager" mode="proxy" proxy-target-class="true"/>	
 	<beans>
 		<bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
 			<property name="caches">
